@@ -1,0 +1,23 @@
+9-17 Work Computer Blocker — Internal Policy. Ferreira & Lund Consulting, Operations department. Version 2.3, effective 1 March 2027.
+
+Purpose. The 9-17 Work Computer Blocker is an agent installed on every company workstation. It enforces the 40-hour working week by allowing each workstation 8 hours of use per working day, Monday to Friday.
+
+Daily limit. The 8-hour counter starts at the first power-on of the day and counts powered-on time only. Sleep mode counts as powered on; a full shutdown pauses the counter. When the counter reaches 8 hours, the workstation locks until 05:00 on the next working day.
+
+Warnings and auto-save. A yellow banner appears at 7 hours 30 minutes and a red countdown at 7 hours 55 minutes. At the moment of the lock, files open in any application are auto-saved to the Blocked-Session folder on the H: drive.
+
+Weekends. On Saturdays and Sundays the workstation does not start at all. The screen shows the message "Weekend — see you Monday" and no login is possible.
+
+Holidays. The blocker treats company holidays exactly like weekends. The 2027 holiday calendar is 1 January, 19 March (Founders' Day), 21 April, 1 May, 7 September, 2 November and 25 December.
+
+Overtime exceptions. The Head of Operations, Marta Quintela, can grant an overtime exception of up to 2 extra hours on a single working day. Requests go through the Portal Horas ticket queue at least 24 hours in advance, and each employee is limited to 4 exceptions per calendar month.
+
+Weekly balance. Hours granted by an overtime exception are deducted from the Friday allowance of the same week, so the weekly total never exceeds 40 hours. An exception granted on a Friday is deducted from the following Monday.
+
+Exemptions. Only the IT on-call rotation and the building security desk are exempt from the blocker. Exempt workstations are listed in the Exempt Registry, which is reviewed every quarter; the next review is on 30 June 2027.
+
+Time zone. The counter and the 05:00 unlock always follow São Paulo time (UTC-3), wherever the employee is working from.
+
+Tampering. Disabling, uninstalling or bypassing the agent is a Level 2 policy breach. The agent reports tamper attempts to Operations within 15 minutes, and a first breach results in a written warning.
+
+Support. Problems with the blocker go to the Blocker Desk on extension 1917, staffed 08:30 to 17:30 on working days. Outside those hours, locked workstations cannot be reopened.

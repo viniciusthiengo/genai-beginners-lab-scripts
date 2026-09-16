@@ -1,0 +1,26 @@
+# Exercise 3 — the eight user turns, one per line.
+#
+# >>> YOUR TASK: replace the 8 EXAMPLE lines below with messages a user of YOUR
+# persona would send (see the YOUR TASK block in chat.py). Keep the structure,
+# because it is what the exercise measures:
+#   - turn 1 states a fact with a name and a number (an order, a plate, an ID)
+#   - turns 3 and 4 ask questions whose answers turns 6 and 7 refer back to
+#   - turn 8 asks for the number from turn 1
+# Car store example, turn 1: "Hi, I'm Rui, my order is #5521, a white 2022 Onix."
+# Car store example, turn 8: "What was my order number again?"
+#
+# Kept in a file so the SAME eight messages can be replayed under every
+# trimming setting. Blank lines and #-comments are ignored.
+#
+#   turn 1  plants the fact the probe needs (name + student ID)
+#   turn 6  refers back to the answer given in turn 3
+#   turn 7  refers back to the answer given in turn 4
+#   turn 8  is the probe: it can only be answered from turn 1
+Good evening. I'm Ana Duarte, student ID 4471, and I locked my red umbrella inside room B12.
+It is 22:40 and I think the building closes soon. Can I still go in?
+Which door should I use at this hour?
+Do I have to sign anything at the desk?
+My friend Marco is waiting in the parking lot. Can he come in with me?
+Go back to the door you told me to use — is it the same one on weekends?
+Remind me, what did you say about signing at the desk?
+What did I say my student ID was?

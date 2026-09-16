@@ -1,0 +1,48 @@
+{
+  "version": "Day 1 — model choice test set (EXAMPLE: replace with your own prompt and cases)",
+  "system": "You summarize internal documents for new employees. State facts only.",
+  "prompt_template": "Read the document below. List only the rules a new employee must follow. Maximum 3 bullet points, up to 25 words each, no advice of your own. If the document does not contain the requested information, answer exactly: Not covered in this document.\n\nDocument:\n\"\"\"\n{input}\n\"\"\"",
+  "max_tokens": 4000,
+  "criteria": [
+    "Max 3 bullets",
+    "<=25 words per bullet",
+    "Traceable to the document",
+    "No advice",
+    "Case rule respected"
+  ],
+  "cases": [
+    {
+      "id": "T1",
+      "kind": "ordinary",
+      "input_file": "example-document.txt",
+      "expected": "at most 3 bullets, <=25 words each, every bullet traceable to a rule in the document"
+    },
+    {
+      "id": "T2",
+      "kind": "ordinary",
+      "input_file": "example-document-2.txt",
+      "expected": "at most 3 bullets, <=25 words each, every bullet traceable to a rule in the document"
+    },
+    {
+      "id": "T3",
+      "kind": "edge (two documents pasted together)",
+      "input_file": [
+        "example-document.txt",
+        "example-document-2.txt"
+      ],
+      "expected": "still at most 3 bullets; at least one bullet from the second document"
+    },
+    {
+      "id": "T4",
+      "kind": "ambiguous",
+      "input": "Working Arrangements. Ferreira & Lund Consulting, People team. Version 2.0.\n\nRemote work. Staff may work from home on up to two days a week, agreed with their manager.\n\nContractors. Contractors work on site every day and wear a visitor badge.\n\nInterns. Interns follow the working arrangements of the team that hosts them.\n\nEquipment. Staff receive a laptop on their first day; contractors bring their own.",
+      "expected": "a 'new employee' could be staff, a contractor or an intern: pass = says which one it assumed, or asks one clarifying question; fail = lists rules for all three, because the reader still doesn't know which ones apply to them"
+    },
+    {
+      "id": "T5",
+      "kind": "should not be answered",
+      "input": "Company history. Ferreira & Lund Consulting was founded in 1998 by two engineers, Ana Ferreira and Erik Lund, in a rented room above a bakery. The first client was a regional bus company. Today the firm has 140 people in three offices, and its annual summer party is held at a farm outside the city.",
+      "expected": "the text contains no rules at all: pass = exactly 'Not covered in this document.'"
+    }
+  ]
+}
